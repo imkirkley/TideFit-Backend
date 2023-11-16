@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net7.0": {
       "BouncyCastle.Cryptography/2.2.1": {
         "type": "package",
         "compile": {
@@ -154,12 +154,12 @@
           "ZstdSharp.Port": "0.7.1"
         },
         "compile": {
-          "lib/net6.0/MySql.Data.dll": {
+          "lib/net7.0/MySql.Data.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/MySql.Data.dll": {
+          "lib/net7.0/MySql.Data.dll": {
             "related": ".xml"
           }
         },
@@ -204,12 +204,12 @@
           "Microsoft.OpenApi": "1.2.3"
         },
         "compile": {
-          "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {
+          "lib/net7.0/Swashbuckle.AspNetCore.Swagger.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {
+          "lib/net7.0/Swashbuckle.AspNetCore.Swagger.dll": {
             "related": ".pdb;.xml"
           }
         },
@@ -223,12 +223,12 @@
           "Swashbuckle.AspNetCore.Swagger": "6.5.0"
         },
         "compile": {
-          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+          "lib/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+          "lib/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -236,12 +236,12 @@
       "Swashbuckle.AspNetCore.SwaggerUI/6.5.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+          "lib/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+          "lib/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
             "related": ".pdb;.xml"
           }
         },
@@ -274,16 +274,13 @@
       },
       "System.Diagnostics.DiagnosticSource/7.0.2": {
         "type": "package",
-        "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
-        },
         "compile": {
-          "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {
+          "lib/net7.0/System.Diagnostics.DiagnosticSource.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {
+          "lib/net7.0/System.Diagnostics.DiagnosticSource.dll": {
             "related": ".xml"
           }
         },
@@ -534,16 +531,13 @@
       },
       "System.Text.Encodings.Web/7.0.0": {
         "type": "package",
-        "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
-        },
         "compile": {
-          "lib/net6.0/System.Text.Encodings.Web.dll": {
+          "lib/net7.0/System.Text.Encodings.Web.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/System.Text.Encodings.Web.dll": {
+          "lib/net7.0/System.Text.Encodings.Web.dll": {
             "related": ".xml"
           }
         },
@@ -551,7 +545,7 @@
           "buildTransitive/net6.0/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll": {
+          "runtimes/browser/lib/net7.0/System.Text.Encodings.Web.dll": {
             "assetType": "runtime",
             "rid": "browser"
           }
@@ -560,16 +554,15 @@
       "System.Text.Json/7.0.1": {
         "type": "package",
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
           "System.Text.Encodings.Web": "7.0.0"
         },
         "compile": {
-          "lib/net6.0/System.Text.Json.dll": {
+          "lib/net7.0/System.Text.Json.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/System.Text.Json.dll": {
+          "lib/net7.0/System.Text.Json.dll": {
             "related": ".xml"
           }
         },
@@ -624,10 +617,10 @@
       "ZstdSharp.Port/0.7.1": {
         "type": "package",
         "compile": {
-          "lib/net6.0/ZstdSharp.dll": {}
+          "lib/net7.0/ZstdSharp.dll": {}
         },
         "runtime": {
-          "lib/net6.0/ZstdSharp.dll": {}
+          "lib/net7.0/ZstdSharp.dll": {}
         }
       }
     }
@@ -2212,7 +2205,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
+    "net7.0": [
       "Swashbuckle.AspNetCore >= 6.5.0",
       "mysql.data >= 8.2.0"
     ]
@@ -2233,14 +2226,14 @@
         "C:\\Users\\isaia\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net7.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "projectReferences": {}
         }
       },
@@ -2251,8 +2244,8 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net7.0": {
+        "targetAlias": "net7.0",
         "dependencies": {
           "Swashbuckle.AspNetCore": {
             "target": "Package",

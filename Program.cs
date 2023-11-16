@@ -46,3 +46,4 @@ app.MapControllers();
 
 app.Run();
 
+SaveActivity.CreateActivityTable();

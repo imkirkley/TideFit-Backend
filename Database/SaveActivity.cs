@@ -13,7 +13,7 @@ namespace api.Database
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"CREATE TABLE activities(id TEXT, ActivityType TEXT, Distance TEXT, DateCompleted TEXT, Pin BOOLEAN DEFAULT false, Deleted BOOLEAN DEFAULT false)";
+            string stm = @"CREATE TABLE activity(id TEXT, ActivityType TEXT, Distance TEXT, DateCompleted TEXT, Pin BOOLEAN DEFAULT false, Deleted BOOLEAN DEFAULT false)";
 
             using var cmd = new MySqlCommand(stm, con);
 
