@@ -35,6 +35,8 @@ namespace api.Database
 
             using var cmd = new MySqlCommand(stm, con);
 
+            cmd.Parameters.AddWithValue("@id", id);
+
             cmd.ExecuteNonQuery();
 
             con.Close();
