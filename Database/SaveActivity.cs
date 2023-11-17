@@ -27,7 +27,7 @@ namespace api.Database
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"INSERT INTO songs(id, ActivityType, Distance, DateCompleted, Pin, Deleted) VALUES(@id, @ActivityType, @Distance, @DateCompleted, @Pin, @Deleted)";
+            string stm = @"INSERT INTO activity(id, ActivityType, Distance, DateCompleted, Pin, Deleted) VALUES(@id, @ActivityType, @Distance, @DateCompleted, @Pin, @Deleted)";
 
             using var cmd = new MySqlCommand(stm, con);
 
