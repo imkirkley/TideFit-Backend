@@ -24,12 +24,16 @@ namespace api.Database
 
         public void CreateActivity(Activity myActivity)
         {
+            if(myActivity == null)
+            {
+                Console.WriteLine("Activity is null.");
+            }
             ConnectionString myConnection = new ConnectionString();
             string cs = myConnection.cs;
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = "INSERT INTO activity (id, ActivityType, Distance, DateCompleted, Pin, Deleted) VALUES (@id, @ActivityType, @Distance, @DateCompleted, @Pin, @Deleted);";
+            string stm = "INSERT INTO activity(id, ActivityType, Distance, DateCompleted, Pin, Deleted) VALUES (@id, @ActivityType, @Distance, @DateCompleted, @Pin, @Deleted);";
 
             using var cmd = new MySqlCommand(stm, con);
 

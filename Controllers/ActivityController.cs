@@ -35,8 +35,9 @@ namespace api.Controllers
         [HttpPost]
         public void Post([FromBody] Activity value)
         {
-            SaveActivity myActivitys = new SaveActivity();
-            myActivitys.CreateActivity(value);
+            SaveActivity myActivity = new SaveActivity();
+            Console.WriteLine(value);
+            myActivity.CreateActivity(value);
         }
 
         // PUT: api/activity
