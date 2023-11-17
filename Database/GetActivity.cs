@@ -22,7 +22,7 @@ namespace api.Database
             using MySqlDataReader rdr = cmd.ExecuteReader();
 
             while (rdr.Read()) {
-                Activity readActivity = new Activity() {Id = rdr.GetString(0), ActivityType = rdr.GetString(1), Distance = rdr.GetString(2), DateCompleted = rdr.GetString(3), Pin = rdr.GetBoolean(4), Deleted = rdr.GetBoolean(5)};
+                Activity readActivity = new Activity() {id = rdr.GetString(0), ActivityType = rdr.GetString(1), Distance = rdr.GetString(2), DateCompleted = rdr.GetString(3), Pin = rdr.GetBoolean(4), Deleted = rdr.GetBoolean(5)};
                 MyActivity.Add(readActivity);
             }
 

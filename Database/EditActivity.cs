@@ -17,7 +17,7 @@ namespace api.Database
 
             using var cmd = new MySqlCommand(stm, con);
 
-            cmd.Parameters.AddWithValue("@id", myActivity.Id);
+            cmd.Parameters.AddWithValue("@id", myActivity.id);
             cmd.Parameters.AddWithValue("@ActivityType", myActivity.ActivityType);
             cmd.Parameters.AddWithValue("@Distance", myActivity.Distance);
             cmd.Parameters.AddWithValue("@DateCompleted", myActivity.DateCompleted);
