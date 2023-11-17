@@ -42,31 +42,11 @@ namespace api.Controllers
 
         // PUT: api/activity
         [HttpPut("{id}")]
-       public IActionResult Put([FromBody] Activity value)
+       public void Put([FromBody] Activity value)
         {
-            if (!ModelState.IsValid)
-            {
-                // Log each error in the ModelState
-                foreach (var modelStateKey in ModelState.Keys)
-                {
-                    var modelStateVal = ModelState[modelStateKey];
-                    foreach (var error in modelStateVal.Errors)
-                    {
-                        Console.WriteLine($"Error in field {modelStateKey}: {error.ErrorMessage}");
-                    }
-                }
-
-                // Return a BadRequest response with the ModelState errors
-                return BadRequest(ModelState);
-            }
-
-            // If model state is valid, proceed with the update
+           
             EditActivity myActivitys = new EditActivity();
             myActivitys.Edit(value);
-
-            // You might want to return some sort of response here
-            // For example, a success message or the updated object
-            return Ok();
         }
 
 
