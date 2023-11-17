@@ -4,7 +4,7 @@ using api.Models;
 
 namespace api.Database
 {
-    public class SaveActivity : ISaveActivity
+    public class SaveActivity 
     {
         public static void CreateActivityTable() {
             ConnectionString myConnection = new ConnectionString();
@@ -44,18 +44,11 @@ namespace api.Database
             cmd.Parameters.AddWithValue("@Pin", myActivity.Pin);
             cmd.Parameters.AddWithValue("@Deleted", myActivity.Deleted);
 
-            cmd.Prepare();
-
             cmd.ExecuteNonQuery();
 
             con.Close();
 
             //do i neeed to close the connections? and do we need the prepare statement?
         }
-
-        void ISaveActivity.SaveActivity(Activity myActivity)
-        {
-            throw new System.NotImplementedException();
-        }
     }
-}
+}    
