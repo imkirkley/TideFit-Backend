@@ -27,7 +27,7 @@ namespace api.Database
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"INSERT INTO activity(id, ActivityType, Distance, DateCompleted, Pin, Deleted) VALUES(@id, @ActivityType, @Distance, @DateCompleted, @Pin, @Deleted)";
+            string stm = "INSERT INTO activity (id, ActivityType, Distance, DateCompleted, Pin, Deleted) VALUES (@id, @ActivityType, @Distance, @DateCompleted, @Pin, @Deleted);";
 
             using var cmd = new MySqlCommand(stm, con);
 
@@ -41,6 +41,10 @@ namespace api.Database
             cmd.Prepare();
 
             cmd.ExecuteNonQuery();
+
+            con.Close();
+
+            //do i neeed to close the connections? and do we need the prepare statement?
         }
 
         void ISaveActivity.SaveActivity(Activity myActivity)
