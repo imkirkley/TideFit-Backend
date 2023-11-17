@@ -33,7 +33,6 @@ namespace api.Database
 
             con.Close();
 
-            //do i neeed to close the connections? and do we need the prepare statement?
         }
     }
 }    

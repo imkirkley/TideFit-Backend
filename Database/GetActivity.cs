@@ -28,9 +28,7 @@ namespace api.Database
 
             con.Close();
 
-            return MyActivity;
-
-            
+            return MyActivity;            
 
         }
     }
