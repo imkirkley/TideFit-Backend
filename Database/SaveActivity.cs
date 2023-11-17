@@ -6,21 +6,6 @@ namespace api.Database
 {
     public class SaveActivity 
     {
-        public static void CreateActivityTable() {
-            ConnectionString myConnection = new ConnectionString();
-            string cs = myConnection.cs;
-
-            using var con = new MySqlConnection(cs);
-            con.Open();
-
-            string stm = @"CREATE TABLE activity(id TEXT, ActivityType TEXT, Distance TEXT, DateCompleted TEXT, Pin BOOLEAN DEFAULT false, Deleted BOOLEAN DEFAULT false)";
-
-            using var cmd = new MySqlCommand(stm, con);
-
-            cmd.ExecuteNonQuery();
-
-            con.Close();
-        }
 
         public void CreateActivity(Activity myActivity)
         {

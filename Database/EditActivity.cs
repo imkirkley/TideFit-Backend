@@ -13,11 +13,10 @@ namespace api.Database
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"UPDATE Activity SET id = @id, ActivityType = @ActivityType, Distance = @Distance, DateCompleted = @DateCompleted, Pin = @Pin, Deleted = @Deleted WHERE id = @id";
+            string stm = @"UPDATE Activity SET ActivityType = @ActivityType, Distance = @Distance, DateCompleted = @DateCompleted, Pin = @Pin, Deleted = @Deleted WHERE id = @id";
 
             using var cmd = new MySqlCommand(stm, con);
 
-            cmd.Parameters.AddWithValue("@id", myActivity.id);
             cmd.Parameters.AddWithValue("@ActivityType", myActivity.ActivityType);
             cmd.Parameters.AddWithValue("@Distance", myActivity.Distance);
             cmd.Parameters.AddWithValue("@DateCompleted", myActivity.DateCompleted);
