@@ -18,6 +18,8 @@ namespace api.Database
             using var cmd = new MySqlCommand(stm, con);
 
             cmd.ExecuteNonQuery();
+
+            con.Close();
         }
 
         public void CreateActivity(Activity myActivity)

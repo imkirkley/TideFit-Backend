@@ -26,7 +26,12 @@ namespace api.Database
                 MyActivity.Add(readActivity);
             }
 
+            con.Close();
+            
             return MyActivity;
+
+            
+
         }
     }
 }

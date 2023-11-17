@@ -27,6 +27,8 @@ namespace api.Database
             cmd.Prepare();
 
             cmd.ExecuteNonQuery();
+
+            con.Close();
         }
     }
 }

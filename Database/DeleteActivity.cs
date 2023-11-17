@@ -19,6 +19,8 @@ namespace api.Database
             using var cmd = new MySqlCommand(stm, con);
 
             cmd.ExecuteNonQuery();
+
+            con.Close();
         }
         
         public void Delete(string id, Activity myActivity)
@@ -43,6 +45,8 @@ namespace api.Database
             cmd.Prepare();
 
             cmd.ExecuteNonQuery();
+
+            con.Close();
         }
     }
 }
