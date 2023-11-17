@@ -50,10 +50,10 @@ namespace api.Controllers
 
         // DELETE: api/activity
         [HttpDelete("{id}")]
-        public void Delete(string id, [FromBody] Activity value)
+        public void Delete(string id)
         {
             DeleteActivity myActivitys = new DeleteActivity();
-            myActivitys.Delete(id, value);
+            myActivitys.Delete(id);
         }
     }
 }
